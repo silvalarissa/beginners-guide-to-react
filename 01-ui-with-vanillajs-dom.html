@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Create a UI with vanilla js and dom</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/javascript">
+      //get the root element
+      const root = document.getElementById("root");
+
+      //create a div element
+      const element = document.createElement("div");
+
+      //add text to div element
+      element.textContent = "Hello World";
+
+      //add class to div element
+      element.className = "container";
+
+      //add div element to root element
+      root.appendChild(element);
+    </script>
+  </body>
+</html>
