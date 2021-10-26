@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Reusable React Components</title>
+        <script src="https://unpkg.com/react@^16/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+        //get root element
+        const root = document.getElementById("root")
+
+        //create Message function to render the element
+        const Message = props => <div>{props.children}</div>
+
+        //create element to render
+        const element = (
+            <div class="container">
+                <Message>Hello World</Message>    
+            </div>
+        ) 
+
+        ReactDOM.render(element, root)
+        </script>
+    </body>
+</html>
