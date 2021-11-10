@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>useState Hook</title>
+    <script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+    function Gretting () {
+      const [username, setUserName] = React.useState('')
+
+      const handleChange = event => setUserName(event.target.value)
+
+      return (
+        <form>
+          <label htmlFor="username">Username? </label>
+          <input id="username" onChange={handleChange} />
+          <p>{username ? `Hello ${username}` : 'Type your username'}</p>
+        </form>
+      )
+    }
+    ReactDOM.render(<Gretting />, document.getElementById('root'))
+    </script>
+  </body>
+</html>
